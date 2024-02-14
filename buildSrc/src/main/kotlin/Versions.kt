@@ -1,0 +1,16 @@
+object Versions {
+    const val navVersion = "2.7.7"
+    const val coroutines = "1.6.0"
+    const val adapterDelegates = "4.3.2"
+    const val lifecycle = "2.7.0"
+    const val orbit = "6.1.0"
+    const val compose = "1.4.3"
+    const val composeMaterial3 = "1.1.1"
+    const val composeCompiler = "1.4.4"
+    const val hilt = "2.45"
+    const val hiltNavigationcompose = "1.0.0-alpha02"
+    const val okHttp = "5.0.0-alpha.2"
+    const val retrofit = "2.9.0"
+    const val room = "2.5.0"
+    const val koin = "3.4.2"
+}

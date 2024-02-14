@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.screen.RegistrationFragment">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_medium"
+        android:text="@string/enter_title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners_background"
+        android:fontFamily="@font/sf_pro_regular"
+        android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/surnameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <ImageButton
+        android:id="@+id/crossName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:src="@drawable/cross_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/nameEditText"
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintTop_toTopOf="@+id/nameEditText" />
+
+
+    <EditText
+        android:id="@+id/surnameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners_background"
+        android:fontFamily="@font/sf_pro_regular"
+        android:hint="@string/surname"
+        android:paddingStart="16dp"
+        android:maxLength="13"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberEditText" />
+
+    <ImageButton
+        android:id="@+id/crossSurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:src="@drawable/cross_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/surnameEditText"
+        app:layout_constraintEnd_toEndOf="@+id/surnameEditText"
+        app:layout_constraintTop_toTopOf="@+id/surnameEditText" />
+
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corners_background"
+        android:fontFamily="@font/sf_pro_regular"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:gravity="start|center"
+        app:mask="+7 [000] [000]-[00]-[00]"
+        android:paddingStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+        app:layout_constraintStart_toStartOf="@+id/nameEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/crossPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:src="@drawable/cross_ic"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneNumberEditText"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumberEditText"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumberEditText" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corners_button_inactive_background"
+        android:fontFamily="@font/sf_pro_regular"
+        android:gravity="center"
+        android:text="@string/enter"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/policyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/policy_title"
+        app:layout_constraintBottom_toTopOf="@+id/policySubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/policySubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="@string/policy_subtitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

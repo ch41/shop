@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/registration_nav_graph">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.shopapp.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.shopapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.shopapp.ui.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.feature.catalog.ui.screen.CatalogFragment"
+        android:label="CatalogFragment"
+        tools:layout="@layout/fragment_catalog"/>
+
+    <include app:graph="@navigation/registration_nav_graph" />
+    <include app:graph="@navigation/profile_nav_graph" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.feature.profile.ui.screen.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.feature.main.ui.MainFragment"
+        android:label="MainFragment" />
+
+</navigation>
